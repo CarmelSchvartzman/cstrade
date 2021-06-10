@@ -7,6 +7,7 @@ library(shiny)
 library(ggplot2)
 
 shinyUI(fluidPage(
+   theme = bslib::bs_theme(version = 4, bootswatch = "darkly"),
   title = "Strategy Back Test",
   plotOutput('plot'),
 
