@@ -7,7 +7,8 @@ You can analyse the prices represented as Japanese Candlesticks, and backtrack t
 The DataSet is loaded according to your selection of Company Symbol : if you choose GOOGL for example, the pertinent data will be loaded directly from Yahoo Finance.
 
 ##### **What are Technical Indicators?**
-
+Technical indicator are mathematical calculations based on historic price and volume,  aiming to forecast financial market direction. 
+Technical indicators are a fundamental part of the technical analysis and are typically plotted as a chart pattern to try to predict the market trend.
 
 ##### **What is MACD?**
 The positions are opened based on the assumption that the price will be bouncing back when it touches the edge of the Bollinger band.
