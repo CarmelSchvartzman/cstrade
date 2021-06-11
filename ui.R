@@ -1,13 +1,21 @@
+options(encoding = "UTF-8")
+
 #InputID already used: symb, dates, get, adjust, plot, plot_select, BB_win, sd, addBB
 #addVo, BB_Signal, addMACD, processed, modi_macd, macd_fast, macd_slow, macd_signal
 #stop_profit
 #stop_trig
-options(encoding = "UTF-8")
+
 library(shiny)
 library(ggplot2)
 
 shinyUI(fluidPage(
-  theme = bslib::bs_theme(version = 4,bootswatch = "darkly"),
+  theme = bslib::bs_theme(version = 4, bootswatch = "darkly"),
+  
+  navbarPage("Trading Tester",
+             
+             tabPanel("",
+  
+  
   title = "Strategy Back Test",
   plotOutput('plot'),
 
@@ -22,7 +30,7 @@ shinyUI(fluidPage(
            dateRangeInput("dates", 
                           label=h5("Date range"),
                           start = "2013-01-01",
-                          #end   = "2012-12-24"),
+                         
                           end =   as.character(Sys.Date())),
            checkboxInput("addVo", "Plot Volume", 
                          value = FALSE),
@@ -63,9 +71,44 @@ shinyUI(fluidPage(
     )
   ),
   hr(),
-  h6('DISCLAIMER: The statement and analysis in this website is provided as general information and for
-     illustrative purpose only. This app does not intend to provide invesment advice. The author may hold positions in stocks, currencies and 
-     industries discussed here. You understand and acknowledge that there is a very high 
-     degree of risk involved in trading securities and/or currencies. The author assumes no 
-     responsibility or liability for your trading and investment results.')
-))
+  h6('The statement and analysis in this website is provided for educative purposes and as general information for      illustrative purpose only. This app does not intend to provide invesment advice. You understand and acknowledge that there is a very high      degree of risk involved in trading securities and/or currencies. The author assumes no      responsibility or liability for your trading and investment results.')
+  
+  
+             ),  
+  
+  tabPanel("Instructions", 
+           titlePanel("Instructions"), 
+           div(includeMarkdown("explanation.md"), 
+               align="justify")
+  )  ,  
+  
+  tabPanel("About", 
+           titlePanel("About"), 
+           HTML("<a  href = 'https://carmelsoft.netlify.app/'
+                                        target = '_blank'
+                                         style='font:900 12px Comic Sans MS;color:#fff;'  >by CarmelSoft</a>"),
+           div(includeMarkdown("about.md"), 
+               align="justify")
+  )  
+  
+  )
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  ))
