@@ -37,7 +37,7 @@ shinyUI(fluidPage(
            selectInput("plot_select", label = h5("Plot Style"), 
                        choices = list("Lin" = 1, "Candlestick" = 2), selected = 2),
            br(),
-           submitButton('Show the Stock Prices')
+           submitButton('Show the Stock Prices (& see profits)')
     ),
     column(4, 
            h4("Bollinger Bands settings"),
@@ -49,11 +49,12 @@ shinyUI(fluidPage(
                        , value = 20, step=1),
            checkboxInput("addBB", "Display Bands", value = T),
            br(),
-           checkboxInput("processed", "Open Position", value = FALSE),
-           checkboxInput("stop_profit", "Stop profit?", value = TRUE),
+           helpText("Enable this option and click the 'Display' button again in order to calculate the profits"),
+           checkboxInput("processed", "Open Positions", value = FALSE),
+           checkboxInput("stop_profit", "Stop profits?", value = TRUE),
            numericInput("stop_day", label=h6("Period of holding (in days):"), 
                         value=365, min =1, step = 1),
-           sliderInput("stop_trig", label=h6("Trigger to Stop "), min = 0, max = 0.15, value = 0.0, step=0.001)
+           sliderInput("stop_trig", label=h6("Trigger to Stop Sell"), min = 0, max = 0.15, value = 0.0, step=0.001)
     ),
     column(4,
            h4('MACD'),
@@ -68,13 +69,16 @@ shinyUI(fluidPage(
                        , value = 9, step=1), 
            checkboxInput("addMACD", "Display MACD", value = T),
            checkboxInput("modi_macd", "Modify the opened positions according to
-                         MACD (enable the Trigger to Stop).", value = FALSE)
+                         MACD (enable the Trigger to Stop Sell).", value = FALSE)
     )
   ),
   HTML("<a  href = 'https://carmelsoft.netlify.app/'
                                         target = '_blank'
                                          style='font:900 12px Comic Sans MS;color:#fff;'  >by CarmelSoft</a>"),
+  
+ 
   hr(),
+  
   h6('The statement and analysis in this website is provided for educative purposes and as general information for      illustrative purpose only. This app does not intend to provide invesment advice. You understand and acknowledge that there is a very high      degree of risk involved in trading securities and/or currencies. The author assumes no      responsibility or liability for your trading and investment results.')
   
   
@@ -98,6 +102,19 @@ shinyUI(fluidPage(
   )  
   
   )
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
   
   
   
