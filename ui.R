@@ -1,10 +1,5 @@
 options(encoding = "UTF-8")
 
-#InputID already used: symb, dates, get, adjust, plot, plot_select, BB_win, sd, addBB
-#addVo, BB_Signal, addMACD, processed, modi_macd, macd_fast, macd_slow, macd_signal
-#stop_profit
-#stop_trig
-
 library(shiny)
 library(ggplot2)
 
@@ -29,13 +24,13 @@ shinyUI(fluidPage(
            textInput("symb", "Symbol", "SPY"),
            dateRangeInput("dates", 
                           label=h5("Date range"),
-                          start = "2013-01-01",
+                          start = "2016-01-01",
                          
                           end =   as.character(Sys.Date())),
            checkboxInput("addVo", "Plot Volume", 
                          value = FALSE),
            selectInput("plot_select", label = h5("Plot Style"), 
-                       choices = list("Lin" = 1, "Candlestick" = 2), selected = 1),
+                       choices = list("Lin" = 1, "Candlestick" = 2), selected = 2),
            br(),
            submitButton('Submit')
     ),
