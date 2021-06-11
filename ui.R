@@ -2,7 +2,7 @@
 #addVo, BB_Signal, addMACD, processed, modi_macd, macd_fast, macd_slow, macd_signal
 #stop_profit
 #stop_trig
-
+options(encoding = "UTF-8")
 library(shiny)
 library(ggplot2)
 
