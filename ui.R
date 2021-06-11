@@ -16,7 +16,7 @@ shinyUI(fluidPage(
              tabPanel("",
   
   
-  title = "Strategy Back Test",
+  title = "Home",
   plotOutput('plot'),
 
   hr(),
