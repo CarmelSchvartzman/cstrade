@@ -1,6 +1,6 @@
 options(encoding = "UTF-8")
 
-my_packages = c("shiny", "quantmod","ggplot2","bslib")
+my_packages = c("shiny", "quantmod","ggplot2","bslib","markdown")
 
 install_if_missing = function(p) {
   if (p %in% rownames(installed.packages()) == FALSE) {
