@@ -1,5 +1,3 @@
-options(encoding = "UTF-8")
-
 my_packages = c("shiny", "quantmod","ggplot2")
 
 install_if_missing = function(p) {

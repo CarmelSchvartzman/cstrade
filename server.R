@@ -1,4 +1,3 @@
-options(encoding = "UTF-8")
 # server.R
 
 library(quantmod)

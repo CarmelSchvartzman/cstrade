@@ -1,5 +1,3 @@
-options(encoding = "UTF-8")
-
 #InputID already used: symb, dates, get, adjust, plot, plot_select, BB_win, sd, addBB
 #addVo, BB_Signal, addMACD, processed, modi_macd, macd_fast, macd_slow, macd_signal
 #stop_profit
@@ -9,11 +7,6 @@ library(shiny)
 library(ggplot2)
 
 shinyUI(fluidPage(
-  theme = bslib::bs_theme(version = 4, bootswatch = "darkly"),
-  
-  
-  
-  
   title = "Strategy Back Test",
   plotOutput('plot'),
 
