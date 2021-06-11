@@ -15,6 +15,8 @@ The positions are opened based on the assumption that the price will be bouncing
 But the assumption of bouncing might be invalid whenever the trend is fairly strong. 
 MACD helps to identify such trend therefore to adjust strategy accordingly. 
 
+See more at http://carmelsoft.netlify.app
+
 
 DISCLAIMER: The statement and analysis in this website is provided for educative purposes and as general information for illustrative purpose only. This app does not intend to provide invesment advice. You understand and acknowledge that there is a very high degree of risk involved in trading securities and/or currencies. The author assumes no responsibility or liability for your trading and investment results.
 
