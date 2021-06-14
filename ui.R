@@ -4,11 +4,13 @@ options(encoding = "UTF-8")
 #install.packages("bslib")
 
 library(shiny)
+require("shinythemes")
+library(shinythemes)
 library(ggplot2)
 
 shinyUI(fluidPage(
-  theme = bslib::bs_theme(version = 4, bootswatch = "darkly"),
-  
+  #theme = bslib::bs_theme(version = 4, bootswatch = "darkly"),
+  theme = shinytheme("cerulean"),
   navbarPage("Trading Tester",
              
              tabPanel("",
@@ -19,7 +21,7 @@ shinyUI(fluidPage(
   helpText("Define the settings of a Trade Strategy in order to analyse its Profits"),
   plotOutput('plot'),
 
-  hr(),
+  shiny::hr(),
   
   fluidRow(
     column(4,
@@ -77,7 +79,7 @@ shinyUI(fluidPage(
                                          style='font:900 12px Comic Sans MS;color:#fff;'  >by CarmelSoft</a>"),
   
  
-  hr(),
+  shiny::hr(),
   
   h6('The statement and analysis in this website is provided for educative purposes and as general information for      illustrative purpose only. This app does not intend to provide invesment advice. You understand and acknowledge that there is a very high      degree of risk involved in trading securities and/or currencies. The author assumes no      responsibility or liability for your trading and investment results.')
   
